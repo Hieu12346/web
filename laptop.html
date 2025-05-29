@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laptop </title>
+    <title>Đời sống </title>
     <style>
 		
         body {
@@ -14,7 +14,7 @@
         }
 
         .header {
-            background-color: #b40000;
+            background-color: #00AAFF;
             color: white;
             padding: 15px 150px;
             display: flex;
@@ -566,63 +566,57 @@
 		
 		</style>
 </head>
-<body>
+  <body>
     <div class="header">
-        <div class="logo">
-            <img src="Ảnh/ho.jpg" width="76" height="48" alt=""/>
-            <strong>KTSShop.com.vn</strong>
+      <div class="logo">
+        <img src="Ảnh/ho.jpg" width="60" height="60" alt="" />
+        <strong>TienTho.com.vn</strong>
+      </div>
+      <div class="dropdown-menu">
+        <button>Danh mục</button>
+        <div class="menu-content">
+          		<a href="Language.html">Sách ngoại ngữ</a>
+                <a href="doisong.html">Sách đời sống</a>
+                <a href="vanhoc.html">Sách văn học</a>
+                <a href="Truyentranh.html">Truyện tranh</a>
+				<a href="sachthieunhi.html">Sách thiếu nhi</a>
         </div>
-		<div class="dropdown-menu">
-            <button>Danh mục</button>
-            <div class="menu-content">
-                <a href="ĐienThoai.html">Điện thoại</a>
-                <a href="laptop.html">Laptop</a>
-                <a href="DienLanhShop.html">Điện máy</a>
-                <a href="phukien.html">Phụ kiện</a>
-				<a href="dogiadung.html">Đồ gia dụng</a>
-            </div>
         </div>
         <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm">
-            <button id="searchButton">Tìm kiếm</button>
-			
+            <input type="text" placeholder="Nhập tên sách, tác giả, ... cần tìm">
+            <button>Tìm kiếm</button>
         </div>
-		  <div class="icons">
-			<a
-          id="loginLink"
-          href="dangnhap.html"
-          style="color: white; text-decoration: none"
-        >
-          Đăng nhập
-        </a>
 
-            <a href="ShoppingCart.html" style="color: white; text-decoration: none;">
+      <div class="icons">
+			<a href="#" style="color: white; text-decoration: none;">
+				<div>Đăng nhập</div>
+			</a>
+			<a href="#" style="color: white; text-decoration: none;">
 				<div class="cart-icon">🛒 Giỏ hàng
 					<div class="cart-count">0</div>
 				</div>
 			</a>
 		</div>
-
-    </div>
-
-    <div class="menu">
-        <a href="#">Mọi thiết bị công nghệ bạn cần – Tất cả chỉ bằng một cú nhấp chuột!</a>
-		<a href="#">Bảo hành chính hãng, sale nhiều, giảm sâu</a>
-		<a href="#">Mua iPhone 16 Pro Max chính hãng, giá tốt, nhiều ưu đãi tại KTSShop.com.vn</a>
+	 </div>
+    
+  <div class="menu">
+        <a href="#">Chọn sách dễ – Nhận sách nhanh</a>
+		<a href="#">Không gian online của những tâm hồn mê đọc</a>
+		<a href="#">Mua sách chính hãng, giá tốt, nhiều ưu đãi tại TienTho.com.vn</a>
     </div>
 
     <div class="breadcrumb-title-container">
         <div class="breadcrumb">
             <a href="Demo.html" style="color: blue;font-weight: bold;">Trang chủ </a>/
-			<a href="laptop.html">Laptop</a>
+			<a href="doisong.html">Đời sống</a>
         </div>
-        <div class="page-title">Laptop</div>
+        <div class="page-title">Đời sống</div>
 
         <div class="category-line"></div>
         <div class="carousel">
             <div class="carousel-images">
-                <img src="Ảnh/banner1.png" width="1000" height="254" alt=""/> 
-		    	<img src="Ảnh/H1_1440x242_bbb46ff687.png" width="1000" height="252" alt=""/> 
+                <img src="Ảnh/3333.webp" width="1000" height="254" alt=""/> 
+		    	
 			</div>
             <div class="carousel-buttons">
                 <button id="prev">&#10094;</button>
@@ -635,10 +629,10 @@
 			<label for="priceFilter">Lọc theo giá:</label>
 			<select id="priceFilter" onchange="filterProducts()">
 				<option value="all">Tất cả giá</option>
-				<option value="duoi10">Dưới 10 triệu</option>
-				<option value="10-20">Từ 10 đến 20 triệu</option>
-				<option value="20-30">Từ 20 đến 30 triệu</option>
-				<option value="tren30">Trên 30 triệu</option>
+				<option value="duoi10">Dưới 100 nghìn</option>
+				<option value="10-20">Từ 10 đến 40 nghìn</option>
+				<option value="20-30">Từ 40 đến 90 nghìn</option>
+				<option value="tren30">Trên 100 nghìn</option>
 			</select>
 		</div>
 
@@ -654,50 +648,23 @@
 	
 
     <div class="product-list">
-        <div class="product" data-price= "15990000 ">
+        <div class="product" data-price= "500000 ">
 			<a href="Asusvivobook.html">
         		<img src="Ảnh/lt4.png" alt=""/>
 			</a>
-            <div class="price">15.990.000 ₫</div>
-            <div class="old-price">17.990.000 ₫</div>
-            <div class="discount">Giảm giá: -11%</div>
-            <div class="description">Asus Vivobook 14 OLED A1405ZA-KM264W i5 12500H</div>
+            <div class="price">51.450 ₫</div>
+            <div class="old-price">82.950 ₫</div>
+            <div class="discount">Giảm giá: -37%</div>
+            <div class="description">Kĩ năng giải quyết vấn đề</div>
         </div>
-        <div class="product" data-price= "15490000">
+        <div class="product" data-price= "50000">
 			<a href="HP.html">
         		<img src="Ảnh/lt2.jpg" width="150" height="150" alt=""/>
 			</a>
-			<div class="price">15.490.000 ₫</div>
-            <div class="old-price">19.690.000 ₫</div>
-            <div class="discount">Giảm giá: -21%</div>
-            <div class="description">HP 245 G10 R7 7730U (8F157PA)</div>
-  </div>
-        <div class="product" data-price= "26090000">
-			<a href="MacbookAir.html">
-        		<img src="Ảnh/lt3.png" width="150" height="150" alt=""/>
-			</a>
-			<div class="price">26.090.000 ₫</div>
-            <div class="old-price">27.990.000 ₫</div>
-            <div class="discount">Giảm giá: -7%</div>
-            <div class="description">MacBook Air 13 M3 2024 8CPU/8GPU/16GB/256GB</div>
-        </div>
-        <div class="product" data-price= "16490000">
-			<a href="Dell.html">
-        		<img src="Ảnh/lt1.png" width="150" height="150" alt=""/>
-			</a>
-			<div class="price">16.490.000 ₫</div>
-            <div class="old-price">17.290.000 ₫</div>
-            <div class="discount">Giảm giá: -5%</div>
-            <div class="description">Laptop Dell Inspiron N3520 i5 1235U</div>
-        </div>
-        <div class="product" data-price= "20490000">
-			<a href="Asusgaming.html">
-        		<img src="Ảnh/lt5.png" width="150" height="150" alt=""/>
-			</a>
-			<div class="price">20.490.000 ₫</div>
-            <div class="old-price">22.490.000 ₫</div>
-            <div class="discount">Giảm giá: -9%</div>
-            <div class="description"> Asus TUF Gaming FX507ZC4-HN095W i5 12500H</div>
+			<div class="price">75.891 ₫</div>
+            <div class="old-price">98.000 ₫</div>
+            <div class="discount">Giảm giá: -22%</div>
+            <div class="description">Bí quyết học giỏi</div>
         </div>
     </div>
     <div class="chatbox">
@@ -815,10 +782,10 @@
 				let filteredProducts = products.filter(product => {
 					let price = parseInt(product.getAttribute("data-price"));
 					return priceFilter === "all" ||
-						(priceFilter === "duoi10" && price < 10000000) ||
-						(priceFilter === "10-20" && price >= 10000000 && price <= 20000000) ||
-						(priceFilter === "20-30" && price >= 20000000 && price <= 30000000) ||
-						(priceFilter === "tren30" && price > 30000000);
+						(priceFilter === "duoi100" && price < 100000) ||
+						(priceFilter === "10-40" && price >= 10000 && price <= 40000) ||
+						(priceFilter === "50-90" && price >= 50000 && price <= 90000) ||
+						(priceFilter === "tren100" && price > 100000);
 				});
 
 				if (sortOrder === "asc") {
@@ -893,8 +860,8 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(
         () =>
           addMessage(
-            "KTSShop",
-            "Chào mừng đến với KTSShop.com.vn. Bạn cần gì?"
+            "TienTho",
+            "Chào mừng đến với TienTho.com.vn. Bạn cần gì?"
           ),
         1000
       );
