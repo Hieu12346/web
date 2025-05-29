@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập</title>
+    <style>
+		body {
+  background: linear-gradient(135deg, #35b1ea, #2b0cd8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+.input-group input {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.input-group input:focus {
+  border-color: #ff8888;
+  box-shadow: 0 0 8px rgba(255, 136, 136, 0.6);
+  outline: none;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+.forgot-password {
+  color: #6103ed;
+  text-decoration: none;
+}
+.forgot-password:hover {
+  text-decoration: underline;
+}
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #35b1ea, #2b0cd8);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.login-button:hover {
+  background: linear-gradient(135deg, #0616ed, #532dec);
+  transform: scale(1.05);
+}
+.register-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.register-link {
+  color: #4493f3;
+  text-decoration: none;
+  font-weight: bold;
+}
+.register-link:hover {
+  text-decoration: underline;
+}
+.social-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.social-login a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 32px;
+  transition: transform 0.2s ease-in-out;
+}
+.social-login a:hover {
+  transform: scale(1.2);
+}
+.fa-google {
+  color: #db4437;
+}
+.fa-facebook {
+  color: #1877f2;
+}
+.fa-github {
+  color: #333;
+}
+
+	  </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2 class="title">Đăng Nhập</h2>
+
+      <form class="login-form" action="LoginServlet" method="post">
+        <div class="input-group">
+          <label>Tên đăng nhập</label>
+          <input
+            type="text"
+            name="username"
+            placeholder="Nhập tên đăng nhập"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label>Mật khẩu</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Nhập mật khẩu"
+            required
+          />
+        </div>
+
+        <div class="options">
+          <label class="remember-me">
+            <input type="checkbox" name="remember" />
+            Nhớ mật khẩu
+          </label>
+          <a href="#" class="forgot-password">Quên mật khẩu?</a>
+        </div>
+
+        <button type="submit" class="login-button">Đăng nhập</button>
+      </form>
+      <div class="social-login">
+        <a href="#"><i class="fa-brands fa-google"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <p class="register-text">
+        Bạn chưa có tài khoản?
+        <a href="dangky.html" class="register-link">Đăng ký</a>
+      </p>
+    </div>
+    <script> window.onload = function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has("error")) {
+    let message = "Lỗi không xác định!";
+    if (urlParams.get("error") === "invalid") {
+      message = "Tên đăng nhập hoặc mật khẩu sai!";
+    } else if (urlParams.get("error") === "db") {
+      message = "Lỗi kết nối cơ sở dữ liệu!";
+    }
+    alert(message);
+  } else if (urlParams.has("success")) {
+    if (urlParams.get("success") === "login") {
+      alert("Đăng nhập thành công!");
+      localStorage.setItem("loggedIn", "true");
+      window.location.href = "Demo.html";
+    }
+  }
+};
+</script>
+  </body>
+</html>

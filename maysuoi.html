@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Máy sưởi gốm Kangaroo KGFH08</title>
+	  <style>
+	  
+       body {
+        font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+        }
+
+        .header {
+            background-color: #b40000;
+            color: white;
+            padding: 15px 150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .header .search-bar {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .search-bar button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .header .search-bar button:hover {
+            background-color: #555;
+        }
+		
+		.header .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .icons div {
+            margin-left: 15px;
+            cursor: pointer;
+        }
+		
+		.header .dropdown-menu {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .header .dropdown-menu button {
+            font-size: 16px;
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        .header .dropdown-menu .menu-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 8px 0;
+        }
+
+        .header .dropdown-menu .menu-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .header .dropdown-menu .menu-content a:hover {
+            background-color: #f0f0f0;
+        }
+        .menu-content a:focus, .menu-content a:active {
+            background-color: rgba(255, 165, 0, 0.2);
+        }
+
+		.dropdown-menu:hover .menu-content {
+            display: block;
+        }
+		
+        .menu {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+			justify-content: center;
+			gap: 100px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+			margin: 0 10px;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        .breadcrumb-title-container {
+            padding: 20px;
+            background-color: #fff;
+			margin-left: 100px;
+			margin-right: 100px;
+			border-radius: 10px;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .breadcrumb a:hover {
+            color: #b40000;
+        }
+
+        .container {
+            width: flex;
+            margin: auto;
+            max-width: flex;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-images {
+            flex: 1;
+            min-width: 300px;
+        }
+        .image-slider {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+        }
+        .image-slider img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .slider-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .slider-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            font-size: 20px;
+            color: red;
+            margin-bottom: 20px;
+        }
+        .product-specs {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .product-specs h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .product-specs p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .product-actions{
+            display: flex;
+             gap: 20px; 
+             margin-top: 20px;
+        }
+        .buy-button {
+            padding: 15px 30px;
+             background-color: #ff4500;
+              color: white; 
+              border: none; 
+              border-radius: 5px; 
+              font-size: 18px; 
+              cursor: pointer;
+        }
+        .buy-button:hover {
+            background-color: #e63e00;
+        }
+        .add-to-cart{
+            padding: 15px 30px;
+             background-color: #007bff; 
+             color: white; border: none;
+              border-radius: 5px; 
+              font-size: 18px; 
+              cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background-color: #e63e00;
+        }
+        .product-video {
+            margin-bottom: 20px;
+        }
+        .product-video video {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .rating-container {
+    max-width: 100%;
+    width: 95%; 
+    margin: auto;
+    margin-bottom: 20px; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .average-rating {
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .stars {
+            color: gold;
+            font-size: 24px;
+        }
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .bar {
+            flex: 1;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            margin: 0 10px;
+            position: relative;
+        }
+        .bar-fill {
+            height: 100%;
+            background: red;
+            width: 0%;
+            border-radius: 5px;
+        }
+        .rate-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .rate-buttons button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background: #ddd;
+            border-radius: 5px;
+        }
+        .rate-buttons button:hover {
+            background: gold;
+        }
+        .comment-container {
+            max-width: 100%;
+    width: 95%; 
+    margin: auto;
+    margin-bottom: 20px; 
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .comment-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .comment-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .comment-button {
+            padding: 10px 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .comment-list {
+            border-top: 1px solid #ddd;
+    padding-top: 10px;
+    text-align: left;
+        }
+        .comment {
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        .close-button {
+            cursor: pointer;
+            float: right;
+            font-size: 20px;
+        }
+        .reply-box {
+        display: none;
+        background: #f5f5f5;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .comment.reply {
+    margin-left: 20px; /* Thụt vào 20px */
+    background: #f9f9f9; /* Nhẹ nhàng phân biệt với bình luận chính */
+    padding: 5px;
+    border-left: 3px solid #868181;
+}
+
+    .reply-input {
+        width: 94%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .reply-button {
+        background-color: red;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+        @media (max-width: 768px) {
+            .header, .menu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header .search-bar {
+                margin: 10px 0;
+                width: 100%;
+            }
+
+            .product {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .footer {
+			background: #222;
+			color: #fff;
+			padding: 30px 20px;
+			text-align: center;
+		}
+
+		.footer .container {
+			display: flex;
+            background-color: transparent !important;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 1200px;
+			margin: auto;
+			gap: 20px;
+		}
+
+		.footer-column {
+			flex: 1;
+			min-width: 300px;
+			padding: 15px;
+		}
+
+		.footer h3 {
+			color: #f4b400;
+			margin-bottom: 10px;
+			font-size: 18px;
+		}
+
+		.footer ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.footer ul li {
+			margin-bottom: 5px;
+		}
+
+		.footer a {
+			color: #ddd;
+			text-decoration: none;
+		}
+
+		.footer a:hover {
+			color: #fff;
+		}
+
+		.footer-info {
+			margin-top: 20px;
+			padding-top: 15px;
+			border-top: 1px solid #555;
+			font-size: 14px;
+			color: #ccc;
+		}
+
+		.footer-info p {
+			margin: 5px 0;
+			text-align: center;
+		}
+		
+		.chat-input-container {
+			display: flex;
+			align-items: center;
+			border-top: 1px solid #ccc;
+		}
+		
+		.chatbox {
+			position: fixed;
+			bottom: 80px;
+			right: 20px;
+			width: 300px;
+			background: white;
+			border-radius: 20px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+			display: flex;
+			flex-direction: column;
+			transform: translateY(20px);
+			opacity: 0;
+			visibility: hidden;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+		}
+
+		.chatbox.active {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.chat-header {
+			background: #007bff;
+			color: white;
+			padding: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-radius: 20px 20px 0 0;
+		}
+
+		.chat-body {
+			padding: 10px;
+			display: flex;
+			flex-direction: column;
+			border-radius: 0 0 20px 20px;
+		}
+
+		.chat-messages {
+			height: 200px;
+			overflow-y: auto;
+			justify-content: flex-end;
+			align-self: flex-end;
+			border-bottom: 1px solid #ddd;
+			padding-bottom: 5px;
+		}
+
+		.chat-input {
+			width: 75%;
+			padding: 8px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+		}
+
+		.chat-send {
+			width: 20%;
+			padding: 8px;
+			background: #007bff;
+			color: white;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.chat-send:hover {
+			background: #0056b3;
+		}
+
+		.chat-toggle {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			background: #007bff;
+			color: white;
+			width: 50px;
+			height: 50px;
+			border: none;
+			border-radius: 50%;
+			cursor: pointer;
+			font-size: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.chat-toggle:hover {
+			background: #0056b3;
+		}
+.cart-icon {
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
+		.cart-count {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none; /* Ẩn mặc định */
+        }
+        
+        .cart-count.visible {
+            display: flex; /* Hiển thị khi có sản phẩm */
+        }
+
+        .cart-container {
+            width: 80%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .an {
+  display: none;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+.button1 {
+  padding: 12px 20px;
+  background: rgb(34, 109, 142);
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  display: block;
+  margin: 15px auto;
+  transition: 0.3s;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(137, 184, 234, 0.2);
+}
+.button1:hover {
+  background: linear-gradient(to right, #5aa6d9, #3cb3ef);
+  transform: scale(1.05);
+}
+.button1:active {
+  transform: scale(0.95);
+}
+
+	  </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img
+          src="Ảnh/480119606_2353868115012094_3681363280069979819_n.jpg"
+          width="76"
+          height="48"
+          alt=""
+        />
+        <strong>KTSShop.com.vn</strong>
+      </div>
+      <div class="dropdown-menu">
+        <button>Danh mục</button>
+        <div class="menu-content">
+          <a href="ĐienThoai.html">Điện thoại</a>
+          <a href="laptop.html">Laptop</a>
+          <a href="DienLanhShop.html">Điện máy</a>
+          <a href="phukien.html">Phụ kiện</a>
+          <a href="dogiadung.html">Đồ gia dụng</a>
+        </div>
+      </div>
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm"
+        />
+        <button id="searchButton">Tìm kiếm</button>
+      </div>
+      <div class="icons">
+        <a
+          id="loginLink"
+          href="dangnhap.html"
+          style="color: white; text-decoration: none"
+        >
+          Đăng nhập
+        </a>
+        <a
+          href="ShoppingCart.html"
+          style="color: white; text-decoration: none"
+        >
+          <div class="cart-icon">
+            🛒 Giỏ hàng
+            <div class="cart-count">0</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="menu">
+      <a href="#"
+        >Mọi thiết bị công nghệ bạn cần – Tất cả chỉ bằng một cú nhấp chuột!</a
+      >
+      <a href="#">Bảo hành chính hãng, sale nhiều, giảm sâu</a>
+      <a href="#"
+        >Mua iPhone 16 Pro Max chính hãng, giá tốt, nhiều ưu đãi tại
+        KTSShop.com.vn</a
+      >
+    </div>
+
+    <div class="breadcrumb-title-container">
+      <div class="breadcrumb">
+        <a
+          href="Demo.html"
+          style="color: blue; font-weight: bold"
+          >Trang chủ</a
+        >
+        /
+        <a href="dogiadung.html" style="color: blue; font-weight: bold"
+          >Đồ gia dụng</a
+        >/
+        <a>Máy sưởi gốm Kangaroo KGFH08</a>
+      </div>
+      <div class="container">
+        <div class="product-images">
+          <div class="image-slider">
+            <img src="Ảnh/0.jpg" alt="Product Image 1" />
+            <img src="Ảnh/90.webp" alt="Product Image 2" />
+            <img src="Ảnh/93.webp" alt="Product Image 3" />
+            <img src="Ảnh/92.webp" alt="Product Image 4" />
+            <img
+              src="Ảnh/91.webp"
+              alt="Product Image 5"
+              style="display: none"
+            />
+            <div class="slider-buttons">
+              <button class="slider-button" onclick="changeImage(-1)">
+                &lt;
+              </button>
+              <button class="slider-button" onclick="changeImage(1)">
+                &gt;
+              </button>
+            </div>
+          </div>
+          <div class="product-specs">
+            <h3>Thông số nổi bật</h3>
+            <p><strong>Model:</strong> KGFH08</p>
+            <p><strong>Xuất sứ:</strong> Trung Quốc</p>
+            <p><strong>Thời gian ra mắt:</strong> 2021</p>
+            <p><strong>Thời gian bảo hành:</strong> 12 tháng</p>
+            <p><strong>Màu sắc:</strong> Đen</p>
+            <p><strong>Loại quạt sưởi:</strong> Sưởi gốm Ceramic</p>
+            <p><strong>Công nghệ sưởi:</strong> Sưởi gốm Ceramic</p>
+            <p><strong>Công suất:</strong> 2000 W</p>
+            <p><strong>Điện áp:</strong> 220V</p>
+            <p><strong>Phạm vi làm ấm:</strong> 15 - 25 m2</p>
+            <p>
+              <strong>Bảng điều khiển:</strong> Cảm ứng có màn hình hiển thị
+            </p>
+            <p><strong>Phụ kiện trong hộp:</strong> Sách HDSD</p>
+          </div>
+        </div>
+        <div class="product-details">
+          <h1 class="product-title">Máy sưởi gốm Kangaroo KGFH08</h1>
+          <div class="product-video">
+            <iframe
+              width="100%"
+              height="420"
+              src="https://www.youtube.com/embed/BCytIeJ48jU"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="product-price">
+            3.490.000 đ
+            <del style="color: #888; font-size: 16px">4.890.000 đ</del>
+          </div>
+          <div class="product-actions">
+            <a href="ThanhToan.html">
+              <button class="buy-button">Mua ngay</button></a
+            >
+            <a href="#" button class="add-to-cart">Thêm vào giỏ hàng</a>
+          </div>
+          <div id="fb-root"></div>
+          <script
+            async
+            defer
+            crossorigin="anonymous"
+            src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0"
+          ></script>
+          <br />
+          <div
+            class="fb-like"
+            data-href="https://developers.facebook.com/docs/plugins/"
+            data-width=""
+            data-layout=""
+            data-action=""
+            data-size=""
+            data-share="true"
+          ></div>
+          <br />
+        </div>
+      </div>
+      <div class="product-description">
+        <h2>Mô tả sản phẩm</h2>
+        <p>
+          Máy sưởi gốm Kangaroo KGFH08 có thiết kế sang trọng cao cấp, được tích
+          hợp nhiều tính năng điều khiển hiện đại như màn hình cảm ứng, cảm biến
+          ECO hay hẹn giờ hoạt động, là sản phẩm mà bạn không nên bỏ lỡ trong
+          mùa đông này.
+        </p>
+        <div id="them-thong-tin" class="an">
+          <div class="image-container">
+            <img src="Ảnh/0.jpg" width="600" height="390" alt="" />
+          </div>
+          <h3>Thiết kế sang trọng bắt mắt</h3>
+          <p>
+            Máy sưởi gốm Kangaroo KGFH08 là sản phẩm máy sưởi cao cấp của thương
+            hiệu Kangaroo, có thiết kế hiện đại và mang ý tưởng mô phỏng hình
+            ảnh của lò sưởi củi lửa truyền thống. Toàn bộ máy có màu đen bóng
+            hiện đại với thiết kế suôn thẳng sang trọng, cho phép máy có thể hài
+            hòa với nhiều không gian từ phòng ngủ cho tới phòng khách. Đặc biệt,
+            nửa thân dưới của máy là màn hình hiện hình ảnh ngọn lửa giống như
+            lò sưởi, tạo cảm giác ấm cúng khi sử dụng.
+          </p>
+
+          <div class="image-container">
+            <img src="Ảnh/50.jpg" width="600" height="390" alt="" />
+          </div>
+          <h3>Công nghệ sưởi PTC-Ceramic hiện đại</h3>
+          <p>
+            Máy sưởi gốm Kangaroo KGFH08 sử dụng công nghệ sưởi gốm PTC để làm
+            ấm không gian. Cụ thể, máy sưởi Kangaroo có bộ phận phát nhiệt là
+            một miếng gốm hình dạng dẹt gọi là đĩa gốm, đĩa được nối với một dây
+            kim loại, khi đĩa gốm được làm nóng lên sẽ truyền nhiệt cho dây kim
+            loại, sinh ra một dòng nhiệt lượng đối lưu truyền ra ngoài không
+            gian, giúp cho nhiệt độ phòng từ từ tăng lên mà không gây đốt cháy
+            oxi, do đó sẽ không gây khó thở hay khô da, đem đến cho bạn bầu
+            không khí ấm cúng một cách thoải mái nhất.
+          </p>
+          <div class="image-container">
+            <img src="Ảnh/51.jpg" width="600" height="390" alt="" />
+          </div>
+
+          <h3>Công suất lớn đi kèm chế độ tiết kiệm điện năng</h3>
+          <p>
+            Máy có tổng cộng 2 chế độ sưởi là Chế độ sưởi cao 2000W và chế độ
+            sưởi vừa 1300W, thích hợp cho không gian từ 10-20m2. Dù là trong chế
+            độ nào, người dùng cũng có thể tự cho điều chỉnh mức nhiệt độ của
+            máy từ 15°C – 35°C. Đặc biệt, máy được tích hợp chức năng ECO, có
+            khả năng tự động điều chỉnh nhiệt độ sưởi cho phù hợp với nhiệt độ
+            môi trường thực tế, vừa giúp tiết kiệm điện năng vừa mang đến sự
+            thoải mái cho người dùng.
+          </p>
+          <div class="image-container">
+            <img src="Ảnh/52.jpg" width="600" height="390" alt="" />
+          </div>
+          <h3>Điều khiển dễ dàng với màn hình cảm ứng</h3>
+          <p>
+            Tất cả các tính năng của máy được bố trí trên một bảng điều khiển
+            cảm ứng, kèm với đó là màn hình LED hiện đại hiển thị rõ mức nhiệt
+            độ của máy. Ngoài ra máy còn được trang bị thêm một điều khiển từ xa
+            được đặt trong khay gọn gàng ở đằng sau máy, tạo sự tiện lợi đến tối
+            đa khi sử dụng.
+          </p>
+          <div class="image-container">
+            <img src="Ảnh/53.jpg" width="600" height="390" alt="" />
+          </div>
+          <h3>Hẹn giờ tiện lợi cho giấc ngủ được trọn vẹn ấm cúng</h3>
+          <p>
+            Máy có tính năng hẹn giờ với thời gian hẹn bật-tắt lên đến 24h, cho
+            phép người dùng được tự do cài đặt thời gian hoạt động của máy như
+            mong muốn, không lo thức giấc hay phải canh thời gian tắt thiết bị
+            khi sử dụng vào ban đêm.
+          </p>
+          <div class="image-container">
+            <img src="Ảnh/54.jpg" width="600" height="390" alt="" />
+          </div>
+          <h3>Thiết kế vững chãi và đảm bảo an toàn</h3>
+          <p>
+            Máy có chân đế vững chãi chống ngã đổ, phần quạt sưởi được bọc lưới
+            bảo vệ để tránh gây bỏng. Đặc biệt, lồng và vỏ nhựa phía sau máy
+            được thiết kế để chống cháy tuyệt đối, cùng với đó là lưới tản nhiệt
+            để giúp sản phẩm không bị hư hỏng do quá nóng. Máy còn được trang bị
+            cơ chế tự ngắt điện để máy sẽ tự ngắt mỗi khi bị đổ, ngã, hoặc đang
+            nằm ngang, do đó đảm bảo an toàn tuyệt đối khi sử dụng trong gia
+            đình có trẻ nhỏ. Ngoài ra, máy còn được tích hợp bộ lọc bụi không
+            khí để đem đến cho bạn bầu không khí ấm áp và trong lành nhất khi
+            hoạt động. Bộ lọc này có thể tháo rời để vệ sinh và tái sử dụng
+            nhiều lần, cực kì tiện dụng.
+          </p>
+          <div class="image-container">
+            <img src="Ảnh/55.jpg" width="600" height="390" alt="" />
+          </div>
+        </div>
+        <button id="xemThemBtn" class="button1">Xem Thêm ▼</button>
+      </div>
+      <div class="rating-container">
+        <h2>Khách hàng nói về sản phẩm</h2>
+        <div class="average-rating" id="avg-rating">4.8</div>
+        <p id="total-reviews">4 lượt đánh giá</p>
+        <div class="stars" id="star-display">★★★★★</div>
+
+        <div>
+          <div class="rating-bar">
+            <span>5★</span>
+            <div class="bar"><div class="bar-fill" id="bar-5"></div></div>
+            <span id="count-5">3</span>
+          </div>
+          <div class="rating-bar">
+            <span>4★</span>
+            <div class="bar"><div class="bar-fill" id="bar-4"></div></div>
+            <span id="count-4">1</span>
+          </div>
+          <div class="rating-bar">
+            <span>3★</span>
+            <div class="bar"><div class="bar-fill" id="bar-3"></div></div>
+            <span id="count-3">0</span>
+          </div>
+          <div class="rating-bar">
+            <span>2★</span>
+            <div class="bar"><div class="bar-fill" id="bar-2"></div></div>
+            <span id="count-2">0</span>
+          </div>
+          <div class="rating-bar">
+            <span>1★</span>
+            <div class="bar"><div class="bar-fill" id="bar-1"></div></div>
+            <span id="count-1">0</span>
+          </div>
+        </div>
+
+        <div class="rate-buttons">
+          <button onclick="rate(5)">5★</button>
+          <button onclick="rate(4)">4★</button>
+          <button onclick="rate(3)">3★</button>
+          <button onclick="rate(2)">2★</button>
+          <button onclick="rate(1)">1★</button>
+        </div>
+        <div class="comment-container">
+          <div class="comment-box">
+            <input
+              type="text"
+              class="comment-input"
+              placeholder="Nhập nội dung bình luận"
+            />
+            <button class="comment-button" onclick="openModal()">
+              Gửi bình luận
+            </button>
+          </div>
+          <div class="comment-list" id="commentList"></div>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <div class="modal">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3>Thông tin người gửi</h3>
+            <input
+              type="text"
+              id="nameInput"
+              placeholder="Nhập họ và tên"
+              style="
+                display: block;
+                width: 100%;
+                margin-top: 10px;
+                padding: 5px;
+              "
+            />
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Nhập Email (nhận thông báo phản hồi)"
+              style="
+                display: block;
+                width: 100%;
+                margin-top: 10px;
+                padding: 5px;
+              "
+            />
+            <button
+              style="
+                margin-top: 10px;
+                width: 100%;
+                padding: 10px;
+                background-color: black;
+                color: white;
+                border: none;
+                border-radius: 5px;
+              "
+              onclick="submitComment()"
+            >
+              Hoàn tất
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="chatbox">
+        <div class="chat-header">
+          <span>💬 Hỗ trợ khách hàng</span>
+          <button class="chat-close">✖</button>
+        </div>
+        <div class="chat-body">
+          <div class="chat-messages"></div>
+          <div class="chat-input-container">
+            <input
+              type="text"
+              class="chat-input"
+              placeholder="Nhập tin nhắn..."
+            />
+            <button class="chat-send">Gửi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="chat-toggle">💬</button>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-column">
+          <h3>Chăm sóc khách hàng</h3>
+          <ul>
+            <li><a href="#">Chính sách bảo hành</a></li>
+            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            <li><a href="#">Chính sách vận chuyển</a></li>
+            <li><a href="#">Điều khoản sử dụng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Thông tin về website</h3>
+          <p>Website bán các sản phẩm kỹ thuật số</p>
+          <p>📍 Địa chỉ: Trường Đại Học Tài chính - Ngân hàng Hà Nội</p>
+          <p>31 Dịch Vọng Hậu - Cầu Giấy - Hà Nội</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Phương Thức Thanh Toán</h3>
+          <p>💳 Thanh toán qua thẻ: Visa, MasterCard</p>
+          <p>🏦 Chuyển khoản ngân hàng</p>
+          <p>📲 Ví điện tử: Momo, ZaloPay</p>
+          <p>💰 Thanh toán khi nhận hàng (COD)</p>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-info">
+          <p>© 2025 KTSShop.com.vn. Tất cả quyền được bảo lưu.</p>
+          <p>Website được phát triển bởi nhóm 6 môn TMVNHDT. Liên hệ:</p>
+          <p>
+            <strong>Thành viên:</strong> Nguyễn Trung Hiếu - MSV: 2254800004 -
+            Email:
+            <a href="mailto:nguyentrunghieu252004@gmail.com"
+              >nguyentrunghieu252004@gmail.com</a
+            >
+            - SĐT: 0358495610
+          </p>
+        </div>
+      </footer>
+    </footer>
+    <script>
+	  document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("searchInput");
+  const searchButton = document.getElementById("searchButton");
+
+  if (searchButton && searchInput) {
+    searchButton.addEventListener("click", function () {
+      let keyword = searchInput.value.trim().toLowerCase();
+      if (keyword) {
+        window.location.href = `Search.html?search=${encodeURIComponent(
+          keyword
+        )}`;
+      }
+    });
+
+    searchInput.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        searchButton.click();
+      }
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let xemThemBtn = document.getElementById("xemThemBtn");
+  let themThongTin = document.getElementById("them-thong-tin");
+
+  if (xemThemBtn && themThongTin) {
+    xemThemBtn.addEventListener("click", function () {
+      if (
+        themThongTin.style.display === "none" ||
+        themThongTin.style.display === ""
+      ) {
+        themThongTin.style.display = "block";
+        this.innerHTML = "Thu gọn ▲ ";
+      } else {
+        themThongTin.style.display = "none";
+        this.textContent = "Xem thêm ▼ ";
+      }
+    });
+  }
+});
+
+let currentImageIndex = 0;
+function showImage(index) {
+  const images = document.querySelectorAll(".image-slider img");
+  images.forEach((img, i) => {
+    img.style.display = i === index ? "block" : "none";
+  });
+}
+function changeImage(direction) {
+  const images = document.querySelectorAll(".image-slider img");
+  currentImageIndex =
+    (currentImageIndex + direction + images.length) % images.length;
+  showImage(currentImageIndex);
+}
+document.addEventListener("DOMContentLoaded", () => {
+  showImage(currentImageIndex);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const chatbox = document.querySelector(".chatbox");
+  const chatToggle = document.querySelector(".chat-toggle");
+  const chatClose = document.querySelector(".chat-close");
+  const chatInput = document.querySelector(".chat-input");
+  const chatSend = document.querySelector(".chat-send");
+  const chatMessages = document.querySelector(".chat-messages");
+
+  chatToggle.addEventListener("click", () => {
+    chatbox.classList.toggle("active");
+    chatToggle.style.display = chatbox.classList.contains("active")
+      ? "none"
+      : "block";
+  });
+
+  chatClose.addEventListener("click", () => {
+    chatbox.classList.remove("active");
+    setTimeout(() => {
+      chatToggle.style.display = "block";
+    }, 300);
+  });
+
+  chatSend.addEventListener("click", () => {
+    let message = chatInput.value.trim();
+    if (message) {
+      let msgElement = document.createElement("div");
+      msgElement.textContent = message;
+      msgElement.style.padding = "5px";
+      msgElement.style.margin = "5px 0";
+      msgElement.style.background = "#f1f1f1";
+      msgElement.style.borderRadius = "5px";
+      chatMessages.appendChild(msgElement);
+      chatInput.value = "";
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+  });
+
+  chatInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      chatSend.click();
+    }
+  });
+});
+
+// Lấy đường dẫn URL làm ID duy nhất cho từng trang
+const pageID = window.location.pathname;
+
+// Đánh giá mặc định (hiển thị khi tải trang)
+const defaultRatings = [3, 1, 0, 0, 0];
+const totalRatingsDefault = 4; // Tổng số lượt đánh giá mặc định
+const totalScoreDefault = 3 * 5 + 1 * 4 + 0 * 3 + 0 * 2 + 0 * 1;
+
+// Biến lưu trạng thái tạm thời
+let currentRatings = [...defaultRatings];
+let currentTotalRatings = totalRatingsDefault;
+let currentTotalScore = totalScoreDefault;
+
+function updateUI(ratings, totalRatings, totalScore) {
+  let avg = (totalScore / totalRatings).toFixed(1); // Làm tròn đến 1 số thập phân
+  document.getElementById("avg-rating").innerText = avg;
+  document.getElementById("total-reviews").innerText =
+    totalRatings + " lượt đánh giá";
+
+  let starDisplay = "☆☆☆☆☆";
+  if (avg >= 1.0) starDisplay = "★☆☆☆☆";
+  if (avg >= 2.0) starDisplay = "★★☆☆☆";
+  if (avg >= 3.0) starDisplay = "★★★☆☆";
+  if (avg >= 4.0) starDisplay = "★★★★☆";
+  if (avg == 5.0) starDisplay = "★★★★★";
+  document.getElementById("star-display").innerHTML = starDisplay;
+
+  // Cập nhật thanh tiến trình
+  for (let i = 0; i < 5; i++) {
+    let percent = ((ratings[i] / totalRatings) * 100).toFixed(1) || 0; // Giữ số thập phân chính xác
+    document.getElementById(`bar-${5 - i}`).style.width = percent + "%";
+    document.getElementById(`count-${5 - i}`).innerText = ratings[i];
+  }
+}
+
+function rate(star) {
+  // Cập nhật dữ liệu tạm thời
+  currentRatings[5 - star]++;
+  currentTotalRatings++;
+  currentTotalScore += star;
+
+  updateUI(currentRatings, currentTotalRatings, currentTotalScore);
+}
+
+// Khi tải lại trang, hiển thị trạng thái mặc định
+window.onload = () => {
+  currentRatings = [...defaultRatings];
+  currentTotalRatings = totalRatingsDefault;
+  currentTotalScore = totalScoreDefault;
+  updateUI(defaultRatings, totalRatingsDefault, totalScoreDefault);
+};
+
+// JavaScript cho chức năng thêm sản phẩm vào giỏ hàng
+document.addEventListener("DOMContentLoaded", function () {
+  const addToCartButton = document.querySelector(".add-to-cart");
+
+  addToCartButton.addEventListener("click", function () {
+    const product = {
+      name: "Máy sưởi gốm Kangaroo KGFH08",
+      price: 3490000, // Giá hiện tại
+      oldPrice: 4890000, // Giá cũ
+      image: "Ảnh/0.jpg", // Đường dẫn hình ảnh sản phẩm
+      quantity: 1, // Số lượng mặc định
+      storage: "15-25 m2", // Dung tích
+      color: "Đen", // Màu sắc
+    };
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingProductIndex = cart.findIndex(
+      (item) => item.name === product.name
+    );
+
+    if (existingProductIndex !== -1) {
+      cart[existingProductIndex].quantity += 1;
+    } else {
+      cart.unshift(product);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    localStorage.setItem("cartCount", totalQuantity);
+
+    // Cập nhật số lượng giỏ hàng trên giao diện
+    updateCartCount();
+
+    // Thông báo cho người dùng
+    alert("Sản phẩm đã được thêm vào giỏ hàng!");
+  });
+
+  // Hàm cập nhật số lượng giỏ hàng
+  function updateCartCount() {
+    const cartCount = localStorage.getItem("cartCount") || 0;
+    const cartCountElement = document.querySelector(".cart-count");
+    cartCountElement.textContent = cartCount;
+  }
+
+  function updateCartCount() {
+    const cartCount = localStorage.getItem("cartCount") || 0;
+    const cartCountElement = document.querySelector(".cart-count");
+    cartCountElement.textContent = cartCount;
+  }
+
+  function updateCartCount() {
+    const cartCount = localStorage.getItem("cartCount") || 0;
+    const cartCountElement = document.querySelector(".cart-count");
+
+    if (cartCount > 0) {
+      cartCountElement.textContent = cartCount;
+      cartCountElement.classList.add("visible"); // Hiển thị vùng đỏ
+    } else {
+      cartCountElement.classList.remove("visible"); // Ẩn vùng đỏ
+    }
+  }
+
+  updateCartCount(); // Cập nhật số lượng giỏ hàng khi trang được tải
+});
+document.addEventListener("DOMContentLoaded", function () {
+  if (!sessionStorage.getItem("loaded")) {
+    sessionStorage.setItem("loaded", "true");
+  }
+  loadComments();
+});
+
+function openModal() {
+  document.getElementById("overlay").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+function submitComment() {
+  const name = document.getElementById("nameInput").value.trim();
+  const email = document.getElementById("emailInput").value.trim();
+  const commentText = document.querySelector(".comment-input").value.trim();
+
+  if (name && email && commentText) {
+    const date = new Date().toLocaleDateString("vi-VN");
+    saveComment(name, commentText, date);
+    document.querySelector(".comment-input").value = "";
+    closeModal();
+    setTimeout(() => loadComments(), 300);
+  } else {
+    alert("Vui lòng nhập đầy đủ thông tin!");
+  }
+}
+
+function getPageKey() {
+  return window.location.pathname;
+}
+
+function saveComment(name, comment, date, replyTo = null) {
+  let pageKey = getPageKey();
+  let comments = JSON.parse(localStorage.getItem(pageKey)) || [];
+  comments.push({ name, comment, date, replyTo });
+  localStorage.setItem(pageKey, JSON.stringify(comments));
+  console.log("Lưu bình luận:", comments); // Kiểm tra dữ liệu được lưu
+}
+
+function getComments() {
+  let pageKey = getPageKey();
+  return JSON.parse(localStorage.getItem(pageKey)) || [];
+}
+
+function loadComments() {
+  const comments = getComments();
+  const commentList = document.getElementById("commentList");
+  commentList.innerHTML = "";
+
+  comments.forEach(({ name, comment, date, replyTo }, index) => {
+    addCommentToList(name, comment, date, index, replyTo);
+  });
+}
+
+function addCommentToList(name, comment, date, index, replyTo) {
+  const commentList = document.getElementById("commentList");
+  const newComment = document.createElement("div");
+
+  // Nếu là phản hồi, thêm class "reply" để thụt vào
+  newComment.className = replyTo ? "comment reply" : "comment";
+  newComment.dataset.index = index;
+
+  newComment.innerHTML = `
+<div><strong>${name}</strong> • <span class="comment-date">${date}</span></div>
+<div style="margin-left: 10px;">${comment}</div>
+<button class="reply-btn" onclick="toggleReplyBox(${index})">Trả lời</button>
+<button class="delete-btn" style="display: none; margin-left: 10px; color: red;" onclick="deleteComment(${index})">Xóa bình luận</button>
+
+<div id="replyBox-${index}" class="reply-box" style="display: none;">
+    <strong>Đang trả lời: ${name}</strong>
+    <input type="text" id="replyInput-${index}" class="reply-input" placeholder="Nhập nội dung bình luận">
+    <button class="reply-button" onclick="submitReply(${index}, '${name}')">Gửi</button>
+</div>
+`;
+
+  newComment.addEventListener("click", function () {
+    const deleteBtn = this.querySelector(".delete-btn");
+    deleteBtn.style.display =
+      deleteBtn.style.display === "none" ? "inline-block" : "none";
+  });
+
+  commentList.appendChild(newComment);
+}
+
+function toggleReplyBox(index) {
+  document.querySelectorAll(".reply-box").forEach((box) => {
+    box.style.display = "none";
+  });
+
+  const replyBox = document.getElementById(`replyBox-${index}`);
+  replyBox.style.display = "block";
+  document.getElementById(`replyInput-${index}`).focus();
+}
+
+function submitReply(index, replyingTo) {
+  const replyInput = document
+    .getElementById(`replyInput-${index}`)
+    .value.trim();
+
+  if (replyInput) {
+    const date = new Date().toLocaleDateString("vi-VN");
+    saveComment("KTSShop", replyInput, date, replyingTo);
+    loadComments();
+  }
+}
+function deleteComment(index) {
+  let pageKey = getPageKey();
+  let comments = getComments();
+
+  if (index >= 0 && index < comments.length) {
+    let deletedComment = comments[index];
+
+    // Lọc ra những bình luận không phải là phản hồi của bình luận bị xóa
+    comments = comments.filter(
+      (comment) => comment.replyTo !== deletedComment.name
+    );
+
+    // Xóa chính bình luận đó
+    comments.splice(index, 1);
+
+    localStorage.setItem(pageKey, JSON.stringify(comments));
+    loadComments();
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const loginLink = document.getElementById("loginLink");
+
+  function updateLoginUI() {
+    if (localStorage.getItem("loggedIn") === "true") {
+      loginLink.innerText = "Tài khoản";
+      loginLink.href = "TTCN.html";
+    } else {
+      loginLink.innerText = "Đăng nhập";
+      loginLink.href = "dangnhap.html";
+    }
+  }
+
+  updateLoginUI();
+});
+///////
+document.addEventListener("DOMContentLoaded", function () {
+  const buyNowButtons = document.querySelectorAll(".buy-button");
+
+  buyNowButtons.forEach((button) => {
+
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      // Lấy thông tin sản phẩm
+      const productContainer = this.closest(".product-details");
+      const productName =
+        productContainer.querySelector(".product-title").innerText;
+      const productImage = document.querySelector(".image-slider img").src;
+
+      // Lấy giá từ phần tử có class "product-price"
+      const productPriceText = productContainer
+        .querySelector(".product-price")
+        .childNodes[0].nodeValue.trim();
+      const productPrice = parseInt(productPriceText.replace(/\D/g, ""), 10); // Chuyển về số
+
+      if (!productName || isNaN(productPrice)) {
+        alert("Lỗi: Không thể lấy thông tin sản phẩm!");
+        return;
+      }
+
+      // Chuyển hướng với thông tin sản phẩm
+      window.location.href = `ThanhToan.html?name=${encodeURIComponent(
+        productName
+      )}&price=${productPrice}&image=${encodeURIComponent(productImage)}`;
+    });
+  });
+});
+
+	  </script>
+  </body>
+</html>
