@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danh mục</title>
+    <title>Language</title>
     <style>body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -705,11 +705,11 @@
       <div class="dropdown-menu">
         <button>☰ Danh mục</button>
         <div class="menu-content">
-          <a href="ĐienThoai.html">Điện thoại</a>
-          <a href="laptop.html">Laptop</a>
-          <a href="DienLanhShop.html">Điện máy</a>
-          <a href="phukien.html">Phụ kiện</a>
-          <a href="dogiadung.html">Đồ gia dụng</a>
+          <a href="Language.html">Sách ngoại ngữ</a>
+          <a href="Truyentranh.html">Truyện tranh</a>
+          <a href="phukien.html">Sách đời sống</a>
+          <a href="vanhoc.html">Sách văn học</a>
+		  <a href="sachthieunhi.html">Sách thiếu nhi</a>
         </div>
       </div>
       <div class="search-bar">
@@ -749,9 +749,9 @@
           >Trang chủ</a
         >
         /
-        <a href="ĐienThoai.html">Danh mục</a>
+        <a href="ĐienThoai.html">Sách ngoại ngữ</a>
       </div>
-      <div class="page-title">Danh mục sản phẩm</div>
+      <div class="page-title">Sách ngoại ngữ</div>
 
       <div class="category-line"></div>
       <div class="carousel">
@@ -792,22 +792,19 @@
         <label for="brandFilter">Nhà xuất bản:</label>
         <select id="brandFilter" onchange="filterProducts()">
           <option value="all">Tất cả hãng</option>
-          <option value="iphone">iPhone</option>
-          <option value="Samsung">Samsung</option>
-          <option value="Oppo">Oppo</option>
-          <option value="Realme">Realme</option>
-          <option value="Xiaomi">Xiaomi</option>
+          <option value="Hongduc">NXB Hồng Đức</option>
+          <option value="Dtp">NXB Đại Trường Phát</option>
+          <option value="Cambridge">NXB Cambridge</option>
         </select>
       </div>
 
       <div class="filter-container">
-        <label for="priceFilter">Lọc theo loại:</label>
+        <label for="priceFilter">Lọc theo gia:</label>
         <select id="priceFilter" onchange="filterProducts()">
           <option value="all">Tất cả loại</option>
-          <option value="duoi10">Dưới 10 triệu</option>
-          <option value="10-20">Từ 10 đến 20 triệu</option>
-          <option value="20-30">Từ 20 đến 30 triệu</option>
-          <option value="tren30">Trên 30 triệu</option>
+          <option value="duoi50">Dưới 50 nghìn</option>
+          <option value="50-100">Từ 50 đến 100 nghìn</option>
+          <option value="tren100">Trên 100 nghìn</option>
         </select>
       </div>
 
@@ -824,9 +821,9 @@
     <div class="product-list">
       <div
         class="product"
-        data-price="32890000"
-        data-brand="iphone"
-        onclick="location.href='iphone16ProMax.html'"
+        data-price="95000"
+        data-brand="Hongduc"
+        onclick="location.href='1.html'"
       >
         <img
           src="1.webp"
@@ -834,14 +831,15 @@
           height="150"
           alt=""
         />
+		<div class="price">95.000 ₫</div>
         <div class="description">Tự Học Tiếng Anh Cấp Tốc - Instant Self-study English</div>
-        <button class="buy-now">Liên hệ</button>
+        <button class="buy-now">Mua ngay</button>
       </div>
       <div
         class="product"
-        data-price="9990000"
-        data-brand="Samsung"
-        onclick="location.href='SamsungGalaxyZPlip4.html'"
+        data-price="114000"
+        data-brand="Dtp"
+        onclick="location.href='2.html'"
       >
         <img
           src="2.webp"
@@ -849,14 +847,15 @@
           height="150"
           alt=""
         />
+		  <div class="price">114.000 ₫</div>
         <div class="description">i-Learn Smart Start 5 Student Book</div>
-        <button class="buy-now">Liên hệ</button>
+        <button class="buy-now">Mua ngay</button>
       </div>
       <div
         class="product"
-        data-price="10990000"
-        data-brand="Oppo"
-        onclick="location.href='OppoReno13F.html'"
+        data-price="159000"
+        data-brand="Hongduc"
+        onclick="location.href='3.html'"
       >
         <img
           src="3.webp"
@@ -864,14 +863,15 @@
           height="150"
           alt=""
         />
+		  <div class="price">159.000 ₫</div>
         <div class="description">5000 Từ Vựng Tiếng Trung Bỏ Túi</div>
-        <button class="buy-now">Liên hệ</button>
+        <button class="buy-now">Mua ngay</button>
       </div>
       <div
         class="product"
-        data-price="14990000"
-        data-brand="Xiaomi"
-        onclick="location.href='Xiaomi14TPro.html'"
+        data-price="118000"
+        data-brand="Hongduc"
+        onclick="location.href='4.html'"
       >
         <img
           src="4.jpg"
@@ -879,14 +879,15 @@
           height="150"
           alt=""
         />
+		  <div class="price">118.000 ₫</div>
         <div class="description">5000 Từ Vựng Tiếng Nhật Thông Dụng</div>
-        <button class="buy-now">Liên hệ</button>
+        <button class="buy-now">Mua ngay</button>
       </div>
       <div
         class="product"
-        data-price="7990000"
-        data-brand="Realme"
-        onclick="location.href='Realme13+.html'"
+        data-price="80000"
+        data-brand="Cambridge"
+        onclick="location.href='5.html'"
       >
         <img
           src="5.webp"
@@ -894,8 +895,9 @@
           height="150"
           alt=""
         />
+		<div class="price">80.000 ₫</div>
         <div class="description">Cambridge Key English Test 4</div>
-        <button class="buy-now">Liên hệ</button>
+        <button class="buy-now">Mua ngay</button>
       </div>
     </div>
 
@@ -1044,10 +1046,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let priceMatch =
         priceFilter === "all" ||
-        (priceFilter === "duoi10" && price < 10000000) ||
-        (priceFilter === "10-20" && price >= 10000000 && price <= 20000000) ||
-        (priceFilter === "20-30" && price >= 20000000 && price <= 30000000) ||
-        (priceFilter === "tren30" && price > 30000000);
+        (priceFilter === "duoi50" && price < 50000) ||
+        (priceFilter === "50-100" && price >= 50000 && price <= 100000) ||
+        (priceFilter === "tren100" && price > 100000);
 
       let brandMatch = brandFilter === "all" || brand === brandFilter;
 
@@ -1137,7 +1138,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <img class="chat-avatar" src="${
             isUser
               ? "Ảnh/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg"
-              : "Ảnh/z6322794975136_70f7ef48558d457e4384cf3304b8fc8d.jpg"
+              : "logo.webp.jpg"
           }" alt="Avatar">
           <div class="chat-content-wrapper">
               <div class="${
@@ -1159,8 +1160,8 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(
         () =>
           addMessage(
-            "KTSShop",
-            "Chào mừng đến với KTSShop.com.vn. Bạn cần gì?"
+            "NS Tiến Thọ",
+            "Chào mừng đến với Nhà sách Tiến Thọ. Bạn cần gì?"
           ),
         1000
       );
@@ -1200,11 +1201,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginLink = document.getElementById("loginLink");
 
     function updateLoginUI() {
-        if (!loginLink) return; // Kiểm tra nếu phần tử không tồn tại
+        if (!loginLink) return;
 
         if (localStorage.getItem("loggedIn") === "true") {
             loginLink.innerText = "Tài khoản"; 
-            loginLink.href = "TTCN.html"; // Trang tài khoản hoặc profile
+            loginLink.href = "TTCN.html";
         } else {
             loginLink.innerText = "Đăng nhập";
             loginLink.href = "dangnhap.html"; 
