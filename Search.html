@@ -20,7 +20,7 @@
       }
 
       .header {
-        background-color: #b40000;
+        background-color: #00AAFF00AAFF;
         color: white;
         padding: 15px 150px;
         display: flex;
@@ -527,28 +527,28 @@
     <div class="header">
       <div class="logo">
         <img
-          src="Ảnh/z6322794975136_70f7ef48558d457e4384cf3304b8fc8d.jpg"
+          src="Ảnh/Anhlogo.jpg"
           width="60"
           height="60"
           alt=""
         />
-        <strong>KTSShop.com.vn</strong>
+        <strong>Tiến Thọ</strong>
       </div>
       <div class="dropdown-menu">
         <button>☰ Danh mục</button>
         <div class="menu-content">
-          <a href="ĐienThoai.html">Điện thoại</a>
-          <a href="laptop.html">Laptop</a>
-          <a href="DienLanhShop.html">Điện máy</a>
-          <a href="phukien.html">Phụ kiện</a>
-          <a href="dogiadung.html">Đồ gia dụng</a>
+           <a href="ĐienThoai.html"> Truyện Tranh</a>
+          <a href="laptop.html">Sách Ngoại Ngữ</a>
+          <a href="DienLanhShop.html">Sách Thiếu Nhi</a>
+          <a href="phukien.html">Sách Đời Sống</a>
+          <a href="dogiadung.html">Sách Văn Học</a>
         </div>
       </div>
       <div class="search-bar">
         <input
           type="text"
           id="searchInput"
-          placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm"
+          placeholder="Nhập tên sách... cần tìm"
         />
         <button id="searchButton">Tìm kiếm</button>
       </div>
@@ -569,14 +569,6 @@
       </div>
     </div>
 
-    <div class="menu">
-      <a>Mọi thiết bị công nghệ bạn cần – Tất cả chỉ bằng một cú nhấp chuột!</a>
-      <a>Bảo hành chính hãng, sale nhiều, giảm sâu</a>
-      <a
-        >Mua iPhone 16 Pro Max chính hãng, giá tốt, nhiều ưu đãi tại
-        KTSShop.com.vn</a
-      >
-    </div>
 
     <div class="breadcrumb-title-container">
       <div class="breadcrumb">
@@ -595,11 +587,11 @@
         <label for="brandFilter">Danh mục:</label>
         <select id="brandFilter" onchange="filterProducts()">
           <option value="all">Tất cả</option>
-          <option value="Điện thoại">Điện thoại</option>
-          <option value="Laptop">Laptop</option>
-          <option value="Điện máy">Điện máy</option>
-          <option value="Phụ kiện">Phụ kiện</option>
-          <option value="Đồ gia dụng">Đồ gia dụng</option>
+          <option value="Truyện tranh">Truyện tranh</option>
+          <option value="Sách ngoại ngữ">Sách ngoại ngữ</option>
+          <option value="Sách thiếu nhi">Sách thiếu thi</option>
+          <option value="Sách đời sống">Sách đời sống</option>
+          <option value="Sách văn học">Sách văn học</option>
         </select>
       </div>
 
@@ -607,10 +599,10 @@
         <label for="priceFilter">Lọc theo giá:</label>
         <select id="priceFilter" onchange="filterProducts()">
           <option value="all">Tất cả giá</option>
-          <option value="duoi10">Dưới 10 triệu</option>
-          <option value="10-20">Từ 10 đến 20 triệu</option>
-          <option value="20-30">Từ 20 đến 30 triệu</option>
-          <option value="tren30">Trên 30 triệu</option>
+         <option value="duoi10">Dưới 10000 đồng</option>
+          <option value="10-30">Từ 10000 đến 30000 đồng</option>
+          <option value="30-70">Từ 30000 đến 70000 đồng</option>
+          <option value="tren70">Trên 70000 đồng</option>
         </select>
       </div>
 
