@@ -625,41 +625,41 @@
         </div>
     </div>
     <div class="filter-sort-container">
-		<div class="filter-container">
-			<label for="priceFilter">Lọc theo giá:</label>
-			<select id="priceFilter" onchange="filterProducts()">
-				<option value="all">Tất cả giá</option>
-				<option value="duoi10">Dưới 100 nghìn</option>
-				<option value="10-20">Từ 10 đến 40 nghìn</option>
-				<option value="20-30">Từ 40 đến 90 nghìn</option>
-				<option value="tren30">Trên 100 nghìn</option>
-			</select>
-		</div>
+      <div class="filter-container">
+        <label for="priceFilter">Lọc theo giá:</label>
+        <select id="priceFilter" onchange="filterProducts()">
+          <option value="all">Tất cả giá</option>
+          <option value="duoi50">Dưới 50.000₫</option>
+          <option value="50-100">Từ 50.000₫ đến 100.000₫</option>
+          <option value="100-150">Từ 100.000₫ đến 150.000₫</option>
+          <option value="tren150">Trên 150.000₫</option>
+        </select>
+      </div>
 
-		<div class="sort-container">
-			<label for="sortOrder">Sắp xếp:</label>
-			<select id="sortOrder" onchange="sortProducts()">
-				<option value="featured">Mới nhất</option>
-				<option value="asc">Giá tăng dần</option>
-				<option value="desc">Giá giảm dần</option>
-			</select>
-		</div>
-	</div>
+      <div class="sort-container">
+        <label for="sortOrder">Sắp xếp:</label>
+        <select id="sortOrder" onchange="sortProducts()">
+          <option value="featured">Mới nhất</option>
+          <option value="asc">Giá tăng dần</option>
+          <option value="desc">Giá giảm dần</option>
+        </select>
+      </div>
+    </div>
 	
 
     <div class="product-list">
-        <div class="product" data-price= "500000 ">
-			<a href="Asusvivobook.html">
-        		<img src="Ảnh/lt4.png" alt=""/>
+        <div class="product" data-price= "̀51450 ">
+			<a href="kn.html">
+        		<img src="../Ảnh/1.jpeg" alt=""/>
 			</a>
             <div class="price">51.450 ₫</div>
             <div class="old-price">82.950 ₫</div>
             <div class="discount">Giảm giá: -37%</div>
             <div class="description">Kĩ năng giải quyết vấn đề</div>
         </div>
-        <div class="product" data-price= "50000">
-			<a href="HP.html">
-        		<img src="Ảnh/lt2.jpg" width="150" height="150" alt=""/>
+        <div class="product" data-price= "75891">
+			<a href="bqhg.html">
+        		<img src="../Ảnh/2.jpeg" width="150" height="150" alt=""/>
 			</a>
 			<div class="price">75.891 ₫</div>
             <div class="old-price">98.000 ₫</div>
@@ -716,9 +716,9 @@
     </div>
 
     <div class="footer-info">
-        <p>© 2025 KTSShop.com.vn. Tất cả quyền được bảo lưu.</p>
-        <p>Website được phát triển bởi nhóm 6 môn TMVNHDT. Liên hệ:</p>
-		<p>Thành viên: Nguyễn Hương Trà - MSV: 2251010620 - Email: huongtra1209004@gmail.com - SĐT: 0961896110</p>
+        <p>© 2025 TienTho.com.vn. Tất cả quyền được bảo lưu.</p>
+			<p>Website được phát triển bởi nhóm 2 môn UDTHTQTKD. Liên hệ:</p>
+			<p><strong>Thành viên: </strong> Nguyễn Hương Trà - MSV: 2251010620 - Email: <a href="mailto:huongtra1209004@gmail.com">huongtra1209004@gmail.com</a> - SĐT: 0961896110</p>
     </div>
 </footer>
 <script>
@@ -776,16 +776,21 @@
 			let products = Array.from(document.querySelectorAll(".product"));
 
 			function filterAndSortProducts() {
-				let priceFilter = document.getElementById("priceFilter").value;
-				let sortOrder = document.getElementById("sortOrder").value;
+          let priceFilter = document.getElementById("priceFilter").value;
+          let sortOrder = document.getElementById("sortOrder").value;
 
-				let filteredProducts = products.filter(product => {
-					let price = parseInt(product.getAttribute("data-price"));
-					return priceFilter === "all" ||
-						(priceFilter === "duoi100" && price < 100000) ||
-						(priceFilter === "10-40" && price >= 10000 && price <= 40000) ||
-						(priceFilter === "50-90" && price >= 50000 && price <= 90000) ||
-						(priceFilter === "tren100" && price > 100000);
+          let filteredProducts = products.filter((product) => {
+            let price = parseInt(product.getAttribute("data-price"));
+            return (
+              priceFilter === "all" ||
+              (priceFilter === "duoi50" && price < 50000) ||
+              (priceFilter === "50-100" && price >= 50000 && price <= 100000) ||
+              (priceFilter === "100-150" &&
+                price > 100000 &&
+                price <= 150000) ||
+              (priceFilter === "tren150" && price > 150000)
+            );
+          });
 				});
 
 				if (sortOrder === "asc") {
