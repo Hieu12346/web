@@ -947,8 +947,8 @@
             <div class="product-info">
                 <h1 class="product-title">Bí quyết học giỏi</h1>
 				 <div class="product-options">
-                    <label for="color">Loại sách:</label>
-                    <select id="color">
+                    <label for="book type">Loại sách:</label>
+                    <select id="book type">
                         <option value="0">Sách đời sống</option>
                         
                     </select>
@@ -1352,13 +1352,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addToCartButton.addEventListener("click", function () {
     const product = {
-      name: "Asus TUF Gaming",
-      price: 20490000,
-      oldPrice: 22490000,
-      image: "Ảnh/lt5.png",
+      name: "Bi quyet hoc gioi",
+      price: 75.891,
+      oldPrice: 98000,
+      image: "Ảnh/2.png",
       quantity: 1,
-      storage: "512GB",
-      color: "Xám",
+      
     };
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
